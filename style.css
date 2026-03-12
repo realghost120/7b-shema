@@ -1,1 +1,233 @@
+/* =========================
+   BAS
+   ========================= */
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-attachment: fixed;
+  color: #111;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.corner {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.header-left h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-info {
+  margin-top: 6px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.9;
+}
+
+.corner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.corner i,
+.live-info i,
+.header-left h1 i {
+  color: #00ffcc;
+}
+
+.current {
+  border: 3px solid #00ff00;
+  box-shadow: 0 0 25px rgba(0,255,0,0.7);
+  transform: scale(1.05);
+}
+
+/* =========================
+   VECKA GRID
+   ========================= */
+
+#week {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  padding: 30px;
+}
+
+/* =========================
+   DAG-KORT
+   ========================= */
+
+.day {
+  background: rgba(255,255,255,0.92);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  transition: all 0.35s ease;
+  backdrop-filter: blur(8px);
+}
+
+.day:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+.day h2 {
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   LEKTIONER
+   ========================= */
+
+.lesson {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: all 0.25s ease;
+  color: #111;
+}
+
+.lesson:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.time {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.subject {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+/* =========================
+   ÄMNESFÄRGER (gradient style)
+   ========================= */
+
+.MENTOR { background: linear-gradient(135deg, #b197fc, #9775fa); }
+.MA { background: linear-gradient(135deg, #4dabf7, #339af0); }
+.SV { background: linear-gradient(135deg, #ffd43b, #fab005); }
+.NO { background: linear-gradient(135deg, #69db7c, #40c057); }
+.SO { background: linear-gradient(135deg, #f06595, #e64980); }
+.EN { background: linear-gradient(135deg, #ff922b, #f76707); }
+.IDH { background: linear-gradient(135deg, #38d9a9, #20c997); }
+.LUNCH { background: linear-gradient(135deg, #adb5bd, #868e96); }
+.BLOCK { 
+  background: linear-gradient(135deg, #dee2e6, #ced4da);
+  border: 2px dashed #868e96;
+}
+.SLÖJD { background: linear-gradient(135deg, #cdb4db, #b197fc); }
+.MU1OCHBL1,
+.MU2OCHBL2 { background: linear-gradient(135deg, #ffd6a5, #ffb703); }
+
+/* =========================
+   IDAG MARKERING 🔥
+   ========================= */
+
+.today {
+  border: 3px solid #00ffcc;
+  box-shadow: 0 0 30px rgba(0,255,204,0.6);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 15px rgba(0,255,204,0.4); }
+  to { box-shadow: 0 0 35px rgba(0,255,204,0.8); }
+}
+
+/* =========================
+   FUSK-KNAPP 🔴
+   ========================= */
+
+#fuskBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 18px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(45deg, #ff0000, #ff4d4d);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  transition: all 0.25s ease;
+}
+
+#fuskBtn:hover {
+  transform: scale(1.18);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+/* =========================
+   MOBIL 📱
+   ========================= */
+
+@media (max-width: 768px) {
+  #week {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+  }
+
+  .day {
+    min-width: 85%;
+    scroll-snap-align: center;
+  }
+
+  .day h2 {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    padding: 12px 0;
+    border-radius: 12px;
+    z-index: 2;
+  }
+}
