@@ -5,45 +5,44 @@
 window.schema = {
   "Måndag": [
     { start: "09:00", end: "09:20", subject: "MENTOR" },
-    { start: "09:20", end: "10:20", subject: "MA" },
-    { start: "10:30", end: "11:30", subject: "SV" },
-    { start: "11:40", end: "12:30", subject: "SO" },
-    { start: "12:30", end: "12:50", subject: "LUNCH" },
-    { start: "13:10", end: "13:50", subject: "NO" },
-    { start: "14:00", end: "14:50", subject: "EN" }
+    { start: "09:20", end: "10:20", subject: "Sv" },
+    { start: "10:30", end: "11:30", subject: "MA" },
+    { start: "11:40", end: "12:20", subject: "NO" },
+    { start: "12:20", end: "12:40", subject: "LUNCH" },
+    { start: "13:00", end: "14:00", subject: "SO" },
   ],
   "Tisdag": [
     { start: "08:20", end: "09:10", subject: "BLOCK" },
-    { start: "09:15", end: "10:15", subject: "MU 1 OCH BL 1" },
-    { start: "10:20", end: "11:20", subject: "MU 2 OCH BL 2" },
-    { start: "11:25", end: "12:25", subject: "MA" },
-    { start: "12:25", end: "12:45", subject: "LUNCH" },
-    { start: "13:05", end: "13:45", subject: "SV" },
-    { start: "13:55", end: "14:35", subject: "SO" }
+    { start: "09:15", end: "10:15", subject: "MA" },
+    { start: "10:20", end: "11:20", subject: "NO" },
+    { start: "11:25", end: "12:25", subject: "Lunch" },
+    { start: "12:00", end: "13:00", subject: "BIld musik" },
+    { start: "13:05", end: "14:05", subject: "bild musik" },
+    { start: "14:15", end: "15:15", subject: "EN" }
   ],
   "Onsdag": [
-    { start: "08:20", end: "09:20", subject: "SV" },
-    { start: "09:40", end: "10:40", subject: "MA" },
-    { start: "10:50", end: "11:40", subject: "SO" },
+    { start: "08:20", end: "09:20", subject: "MA" },
+    { start: "09:40", end: "10:40", subject: "SV" },
+    { start: "10:50", end: "11:40", subject: "EN" },
     { start: "11:40", end: "12:00", subject: "LUNCH" },
-    { start: "12:25", end: "13:45", subject: "SLÖJD" },
-    { start: "13:50", end: "14:50", subject: "EN" }
+    { start: "12:40", end: "14:05", subject: "SO" },
+    
   ],
   "Torsdag": [
-    { start: "08:20", end: "09:30", subject: "IDH" },
-    { start: "09:50", end: "10:50", subject: "NO" },
-    { start: "11:15", end: "12:15", subject: "BLOCK" },
-    { start: "12:15", end: "12:35", subject: "LUNCH" },
-    { start: "12:50", end: "13:40", subject: "NO" },
-    { start: "13:45", end: "14:35", subject: "SO" }
+    { start: "08:20", end: "09:20", subject: "NO" },
+    { start: "09:30", end: "10:00", subject: "SO" },
+    { start: "10:05", end: "11:15", subject: "IDH" },
+    { start: "11:25", end: "12:15", subject: "Block" },
+    { start: "12:15", end: "12:35", subject: "Lunch" },
+    { start: "12:45", end: "13:25", subject: "SV" },
+    { start: "14:05", end: "15:25", subject: "Slöjd" }
   ],
   "Fredag": [
-    { start: "08:00", end: "09:10", subject: "IDH" },
+    { start: "08:20", end: "09:10", subject: "MA" },
     { start: "09:20", end: "10:10", subject: "BLOCK" },
-    { start: "10:20", end: "11:20", subject: "NO" },
-    { start: "11:30", end: "11:50", subject: "LUNCH" },
-    { start: "12:10", end: "12:50", subject: "SO" },
-    { start: "13:00", end: "13:40", subject: "MA" }
+    { start: "10:15", end: "11:25", subject: "IDH" },
+    { start: "11:30", end: "12:40", subject: "NO" },
+    { start: "13:00", end: "14:00", subject: "SO" }
   ]
 };
 
